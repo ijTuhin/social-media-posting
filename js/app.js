@@ -2,28 +2,35 @@ let posts = [];
 
 const likedPostsId = [];
 const reportedPostsId = [];
+//checking
+const displayReportedPostsId = [];
 
 const getLikedPosts = () => {
   return posts.filter((post) => likedPostsId.includes(post.id));
 };
 
 const getReportedPosts = () => {
+
+  /* if () {
+    
+  } */
   return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
 const isLiked = (id) => {
+
   return likedPostsId?.length && !!likedPostsId.includes(id);
 };
 // Fixed
 const addToLiked = (id) => {
   likedPostsId.push(id);
+  console.log(likedPostsId.indexOf(id));
   showPosts(posts);
 };
 
 const reportPost = (id) => {
   reportedPostsId.push(id);
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
-  // console.log('reported post ', reportedPostsId, '\n remainings ', remainingPosts)
   showPosts(remainingPosts);
 };
 
@@ -155,9 +162,12 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
+  const reportedPostsContainer = document.getElementById("reported-container");
+  reportedPostsContainer.innerText = "";
+  // console.log(reportedPosts);
   reportedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("reported").appendChild(div);
+    reportedPostsContainer.appendChild(div);
   });
 };
 
