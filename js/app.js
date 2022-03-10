@@ -53,6 +53,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
   const image = post.image;
+  // added user Image & fixed bug
   const userImage = post.userImage;
   const div = document.createElement("article");
   div.classList.add("post");
