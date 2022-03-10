@@ -65,31 +65,35 @@
     <!-- Bonus section || Question-Answer -->
     <section>
         <div class="d-flex justify-content-center mb-5">
-            <button class="btn btn-primary mb-4 mt-3 px-5" type="button" data-bs-toggle="offcanvas"
+            <button class="btn btn-success mb-4 mt-3 px-5" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">FAQ</button>
         </div>
 
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
             aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Question & Answers</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <h5 class="offcanvas-title px-2 mt-2" id="offcanvasWithBothOptionsLabel">|| Question & Answers ||</h5>
             </div>
-            <div class="offcanvas-body">
-                <div class="offcanvas-title">
-                    <h5>1. How does JavaScript works?</h5>
-                    <small>জাভাস্ক্রিপ্ট বেসিক্যালি একটি ইন্টারপ্রিটেড ল্যাংগুয়েজ, যেখানে এক লাইন
-                        এক লাইন করে এরর চেক করা হয়। এটি স্ট্যাটিক ওয়েভসাইটকে ডাইনামিক করতে পারে ডম ম্যানিপ্যুলেশনের
-                        মাধ্যমে। এই ল্যাংগুয়েজ টপ টু বটম অর্ডার ফলো করে,
+            <div class="offcanvas-body px-4">
+                <div class="offcanvas-title mb-3 d-inline-flex flex-column">
+                    <h6>1. How does JavaScript works?</h6>
+                    <small>জাভাস্ক্রিপ্ট বেসিক্যালি একটি ইন্টারপ্রিটেড ল্যাংগুয়েজ, যেখানে এক
+                        এক লাইন করে error চেক করা হয়। এটি Static Website কে Dynamic করতে পারে DOM Manipulation এর
+                        মাধ্যমে। এই ল্যাংগুয়েজ Top to Bottom অর্ডার ফলো করে,
                         অর্থাৎ প্রথমে যা কোড করা হয়েছে সেটিই আগে এক্সিকিউট হবে। জাভাস্ক্রিপ্ট ইনটার্নাল, এক্সটার্নাল
                         যেকোনোভাবে এড করা যায়, তবে একটি বিষয় খেয়াল রাখতে হবে এটি যেন HTML & CSS এর আগে এড না করা হয়,
-                        নাইলে ডম ম্যানিপ্যুলেশনের কাজ ঠিকভাবে করা হবে না, কেননা HTML লোড হওয়ার আগেই JS লোড হয়ে
+                        নাইলে DOM Manipulation এর কাজ ঠিকভাবে করা হবে না, কেননা HTML লোড হওয়ার আগেই JS লোড হয়ে
                         যাবে।</small>
                 </div>
-                <div class="offcanvas-title">
-                    <h5>2. Differences between Local-storage and <br>Session-storage.</h5>
-                    <small></small>
+                <div class="offcanvas-title d-inline-flex flex-column">
+                    <h6>2. Differences between Local-storage and <br>Session-storage.</h6>
+                    <small>Local-storage এবং Session-storage এর মধ্যে basic যে পার্থক্যটা হলো- page reload বা new tab
+                        open করলে
+                        অথবা page close করলে Session-storage এর ডাটা হারিয়ে যায়, কিন্তু Local-storage এর ডাটা রয়ে যায়।
+                        এর কারণ হলো, Local-storage কাজ করে browser-session এ, আর Session-storage কাজ করে page-session এ।
+                        তাই যতক্ষণ কোনো পেইজ এর সেশন চলে ততক্ষণ Session-storage data থাকে, page close বা reload অথবা new
+                        tab open হলেই এই ডাটা delete হয়ে যায়। কিন্তু ব্রাউজারের সেশন তো
+                        বন্ধ হয় না তাই Local-storage এর ডাটা রয়ে যায়।</small>
                 </div>
             </div>
         </div>
